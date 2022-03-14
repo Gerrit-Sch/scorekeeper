@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Input from "./Input";
 import { useState } from "react";
 
-export default function GameForm({ onCreateGame }) {
+export default function GameForm({ onCreateGame, darkMode }) {
   const [nameOfGame, setNameOfGame] = useState("");
   const [playerNames, setPlayerNames] = useState("");
 
@@ -13,9 +13,11 @@ export default function GameForm({ onCreateGame }) {
       <Form
         aria-labelledby="formHeader"
         autoComplete="off"
+        darkMode={darkMode}
+
         //onSubmit={handleSubmit}
       >
-        <Label for="game">Name of the game:</Label>
+        <Label for="game">Name of the game :</Label>
         <Input
           name="nameOfGame"
           placeholder="e.g. Tabu"
